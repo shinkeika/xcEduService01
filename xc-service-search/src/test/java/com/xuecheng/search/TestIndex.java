@@ -116,7 +116,7 @@ public class TestIndex {
     @Test
     public void testGetDoc() throws IOException {
         //查询请求对象
-        GetRequest getRequest = new GetRequest("xc_course","doc","tzk2-mUBGsEnDOUe482B");
+        GetRequest getRequest = new GetRequest("xc_course","doc","xe3ZYXEB7PWZFbZeHqFI");
         GetResponse getResponse = client.get(getRequest);
         //得到文档的内容
         Map<String, Object> sourceAsMap = getResponse.getSourceAsMap();
