@@ -35,8 +35,8 @@ public class CoursePub implements Serializable {
     private String charge;
     private String valid;
     private String qq;
-    private Float price;
-    private Float price_old;
+    private Double price;
+    private Double price_old;
     private String expires;
     private String teachplan;//课程计划
     @Column(name="pub_time")
@@ -98,11 +98,11 @@ public class CoursePub implements Serializable {
         this.qq = qq;
     }
 
-    public void setPrice(Float price) {
+    public void setPrice(Double price) {
         this.price = price;
     }
 
-    public void setPrice_old(Float price_old) {
+    public void setPrice_old(Double price_old) {
         this.price_old = price_old;
     }
 
@@ -178,11 +178,11 @@ public class CoursePub implements Serializable {
         return qq;
     }
 
-    public Float getPrice() {
+    public Double getPrice() {
         return price;
     }
 
-    public Float getPrice_old() {
+    public Double getPrice_old() {
         return price_old;
     }
 
