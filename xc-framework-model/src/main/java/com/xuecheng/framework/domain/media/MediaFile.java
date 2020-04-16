@@ -49,5 +49,107 @@ public class MediaFile {
     //tag标签用于查询
     private String tag;
 
+    public void setFileId(String fileId) {
+        this.fileId = fileId;
+    }
 
+    public void setFileName(String fileName) {
+        this.fileName = fileName;
+    }
+
+    public void setFileOriginalName(String fileOriginalName) {
+        this.fileOriginalName = fileOriginalName;
+    }
+
+    public void setFilePath(String filePath) {
+        this.filePath = filePath;
+    }
+
+    public void setFileUrl(String fileUrl) {
+        this.fileUrl = fileUrl;
+    }
+
+    public void setFileType(String fileType) {
+        this.fileType = fileType;
+    }
+
+    public void setMimeType(String mimeType) {
+        this.mimeType = mimeType;
+    }
+
+    public void setFileSize(Long fileSize) {
+        this.fileSize = fileSize;
+    }
+
+    public void setFileStatus(String fileStatus) {
+        this.fileStatus = fileStatus;
+    }
+
+    public void setUploadTime(Date uploadTime) {
+        this.uploadTime = uploadTime;
+    }
+
+    public void setProcessStatus(String processStatus) {
+        this.processStatus = processStatus;
+    }
+
+    public void setMediaFileProcess_m3u8(MediaFileProcess_m3u8 mediaFileProcess_m3u8) {
+        this.mediaFileProcess_m3u8 = mediaFileProcess_m3u8;
+    }
+
+    public void setTag(String tag) {
+        this.tag = tag;
+    }
+
+    public String getFileId() {
+        return fileId;
+    }
+
+    public String getFileName() {
+        return fileName;
+    }
+
+    public String getFileOriginalName() {
+        return fileOriginalName;
+    }
+
+    public String getFilePath() {
+        return filePath;
+    }
+
+    public String getFileUrl() {
+        return fileUrl;
+    }
+
+    public String getFileType() {
+        return fileType;
+    }
+
+    public String getMimeType() {
+        return mimeType;
+    }
+
+    public Long getFileSize() {
+        return fileSize;
+    }
+
+    public String getFileStatus() {
+        return fileStatus;
+    }
+
+    public Date getUploadTime() {
+        return uploadTime;
+    }
+
+    public String getProcessStatus() {
+        return processStatus;
+    }
+
+    public MediaFileProcess_m3u8 getMediaFileProcess_m3u8() {
+        return mediaFileProcess_m3u8;
+    }
+
+    public String getTag() {
+        return tag;
+    }
 }

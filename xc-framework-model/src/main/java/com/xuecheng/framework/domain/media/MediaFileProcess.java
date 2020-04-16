@@ -15,4 +15,12 @@ public class MediaFileProcess {
 
     //错误信息
     private String errormsg;
+
+    public void setErrormsg(String errormsg) {
+        this.errormsg = errormsg;
+    }
+
+    public String getErrormsg() {
+        return errormsg;
+    }
 }

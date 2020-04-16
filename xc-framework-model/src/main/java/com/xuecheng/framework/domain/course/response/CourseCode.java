@@ -18,7 +18,8 @@ public enum CourseCode implements ResultCode {
     COURSE_PUBLISH_VIEWERROR(false, 31005, "发布课程视图出错！"),
     COURSE_MEDIS_URLISNULL(false, 31101, "选择的媒资文件访问地址为空！"),
     COURSE_MEDIS_NAMEISNULL(false, 31102, "选择的媒资文件名称为空！"),
-    COURSE_GET_NOTEXISTS(false, 31103, "找不到课程");
+    COURSE_GET_NOTEXISTS(false, 31103, "找不到课程"),
+    COURSE_MEDIA_TEACHPLAN_GRADEERROR(false,31104,"只允许选择第三级的课程计划关联视频！");
 
     //操作代码
     @ApiModelProperty(value = "操作是否成功", example = "true", required = true)

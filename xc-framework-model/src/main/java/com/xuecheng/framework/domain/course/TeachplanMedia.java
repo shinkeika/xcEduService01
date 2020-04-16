@@ -7,9 +7,6 @@ import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
 import java.io.Serializable;
 
-/**
- * Created by admin on 2018/2/7.
- */
 @Data
 @ToString
 @Entity
@@ -30,6 +27,54 @@ public class TeachplanMedia implements Serializable {
 
     @Column(name="media_url")
     private String mediaUrl;
+
+    @Column(name="courseid")
     private String courseId;
+
+    public void setTeachplanId(String teachplanId) {
+        this.teachplanId = teachplanId;
+    }
+
+    public void setMediaId(String mediaId) {
+        this.mediaId = mediaId;
+    }
+
+    public void setMediaFileOriginalName(String mediaFileOriginalName) {
+        this.mediaFileOriginalName = mediaFileOriginalName;
+    }
+
+    public void setMediaUrl(String mediaUrl) {
+        this.mediaUrl = mediaUrl;
+    }
+
+    public void setCourseId(String courseId) {
+        this.courseId = courseId;
+    }
+
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
+    }
+
+    public String getTeachplanId() {
+        return teachplanId;
+    }
+
+    public String getMediaId() {
+        return mediaId;
+    }
+
+    public String getMediaFileOriginalName() {
+        return mediaFileOriginalName;
+    }
+
+    public String getMediaUrl() {
+        return mediaUrl;
+    }
+
+    public String getCourseId() {
+        return courseId;
+    }
+
+
 
 }
