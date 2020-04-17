@@ -15,4 +15,27 @@ public class LoginRequest extends RequestData {
     String password;
     String verifycode;
 
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public void setVerifycode(String verifycode) {
+        this.verifycode = verifycode;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public String getVerifycode() {
+        return verifycode;
+    }
 }

@@ -26,5 +26,31 @@ public class XcCompanyUser implements Serializable {
     @Column(name="user_id")
     private String userId;
 
+    public void setId(String id) {
+        this.id = id;
+    }
 
+    public void setCompanyId(String companyId) {
+        this.companyId = companyId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public String getCompanyId() {
+        return companyId;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
 }

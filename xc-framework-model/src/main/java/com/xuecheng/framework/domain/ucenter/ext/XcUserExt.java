@@ -19,4 +19,21 @@ public class XcUserExt extends XcUser {
 
     //企业信息
     private String companyId;
+
+    public void setPermissions(List<XcMenu> permissions) {
+        this.permissions = permissions;
+    }
+
+    public void setCompanyId(String companyId) {
+        this.companyId = companyId;
+    }
+
+    public List<XcMenu> getPermissions() {
+        return permissions;
+    }
+
+    public String getCompanyId() {
+        return companyId;
+    }
+
 }

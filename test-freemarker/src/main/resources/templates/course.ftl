@@ -11,6 +11,7 @@
     <meta http-equiv="content-type" content="no-cache, must-revalidate" />
     <title>在线教育网--${courseBase.name}</title>
 </head>
+
 <body data-spy="scroll" data-target="#articleNavbar" data-offset="150">
 <!-- 页面头部 -->
 <!--#include virtual="/include/header.html"-->
