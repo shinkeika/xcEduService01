@@ -20,6 +20,7 @@
         <module name="xc-govern-center" />
         <module name="test-fastdfs" />
         <module name="xc-service-manage-media" />
+        <module name="xc-govern-gateway" />
         <module name="xc-service-manage-cms" />
         <module name="xc-service-search" />
         <module name="xc-service-manage-cms-client" />
@@ -37,6 +38,7 @@
       <module name="xc-framework-parent" target="1.8" />
       <module name="xc-framework-utils" target="1.8" />
       <module name="xc-govern-center" target="1.8" />
+      <module name="xc-govern-gateway" target="1.8" />
       <module name="xc-service-api" target="1.8" />
       <module name="xc-service-base-filesystem" target="1.8" />
       <module name="xc-service-learning" target="1.8" />
@@ -60,6 +62,7 @@
       <module name="xc-framework-model" options="-parameters" />
       <module name="xc-framework-utils" options="-parameters" />
       <module name="xc-govern-center" options="-parameters" />
+      <module name="xc-govern-gateway" options="-parameters" />
       <module name="xc-service-api" options="-parameters" />
       <module name="xc-service-base-filesystem" options="-parameters" />
       <module name="xc-service-learning" options="-parameters" />
