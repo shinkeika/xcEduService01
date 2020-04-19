@@ -12,4 +12,12 @@ import lombok.ToString;
 public class CourseListRequest extends RequestData {
     //公司Id
     private String companyId;
+
+    public void setCompanyId(String companyId) {
+        this.companyId = companyId;
+    }
+
+    public String getCompanyId() {
+        return companyId;
+    }
 }

@@ -14,11 +14,6 @@ import org.springframework.stereotype.Component;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/** 身份校验过虑器
- * @author Administrator
- * @version 1.0
- **/
-
 @Component
 public class LoginFilter extends ZuulFilter {
 

@@ -1,16 +1,22 @@
 package com.xuecheng.manage_course.service;
 
 import com.alibaba.fastjson.JSON;
+import com.github.pagehelper.Page;
+import com.github.pagehelper.PageHelper;
 import com.xuecheng.framework.domain.cms.CmsPage;
 import com.xuecheng.framework.domain.cms.response.CmsPageResult;
 import com.xuecheng.framework.domain.cms.response.CmsPostPageResult;
 import com.xuecheng.framework.domain.course.*;
+import com.xuecheng.framework.domain.course.ext.CourseInfo;
 import com.xuecheng.framework.domain.course.ext.CourseView;
 import com.xuecheng.framework.domain.course.ext.TeachplanNode;
+import com.xuecheng.framework.domain.course.request.CourseListRequest;
 import com.xuecheng.framework.domain.course.response.CourseCode;
 import com.xuecheng.framework.domain.course.response.CoursePublishResult;
 import com.xuecheng.framework.exception.ExceptionCast;
 import com.xuecheng.framework.model.response.CommonCode;
+import com.xuecheng.framework.model.response.QueryResponseResult;
+import com.xuecheng.framework.model.response.QueryResult;
 import com.xuecheng.framework.model.response.ResponseResult;
 import com.xuecheng.manage_course.client.CmsPageClient;
 import com.xuecheng.manage_course.dao.*;
@@ -27,6 +33,10 @@ import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * @author Administrator
+ * @version 1.0
+ **/
 @Service
 public class CourseService {
 
@@ -49,10 +59,11 @@ public class CourseService {
 
     @Autowired
     TeachplanMediaRepository teachplanMediaRepository;
-
-
     @Autowired
     TeachplanMediaPubRepository teachplanMediaPubRepository;
+
+    @Autowired
+    CourseMapper courseMapper;
 
     @Autowired
     CmsPageClient cmsPageClient;
@@ -286,25 +297,30 @@ public class CourseService {
         //缓存课程的信息
         //...
         //得到页面的url
-        // 向teachplanMediaPub中保存课程媒资信息
-        saveTeachplanMediaPub(id);
         String pageUrl = cmsPostPageResult.getPageUrl();
+        //向teachplanMediaPub中保存课程媒资信息
+        saveTeachplanMediaPub(id);
         return new CoursePublishResult(CommonCode.SUCCESS,pageUrl);
     }
 
-    //保存课程计划媒资信息
+    //向teachplanMediaPub中保存课程媒资信息
     private void saveTeachplanMediaPub(String courseId){
-        //查询课程媒资信息
-        List<TeachplanMedia> teachplanMediaList = teachplanMediaRepository.findByCourseId(courseId); //将课程计划媒资信息存储待索引表
+        //先删除teachplanMediaPub中的数据
         teachplanMediaPubRepository.deleteByCourseId(courseId);
-        List<TeachplanMediaPub> teachplanMediaPubList = new ArrayList<>();
+        //从teachplanMedia中查询
+        List<TeachplanMedia> teachplanMediaList = teachplanMediaRepository.findByCourseId(courseId);
+        List<TeachplanMediaPub> teachplanMediaPubs = new ArrayList<>();
+        //将teachplanMediaList数据放到teachplanMediaPubs中
         for(TeachplanMedia teachplanMedia:teachplanMediaList){
-            TeachplanMediaPub teachplanMediaPub =new TeachplanMediaPub();
+            TeachplanMediaPub teachplanMediaPub = new TeachplanMediaPub();
             BeanUtils.copyProperties(teachplanMedia,teachplanMediaPub);
+            //添加时间戳
             teachplanMediaPub.setTimestamp(new Date());
-            teachplanMediaPubList.add(teachplanMediaPub);
+            teachplanMediaPubs.add(teachplanMediaPub);
         }
-        teachplanMediaPubRepository.saveAll(teachplanMediaPubList);
+
+        //将teachplanMediaList插入到teachplanMediaPub
+        teachplanMediaPubRepository.saveAll(teachplanMediaPubs);
     }
 
     //将coursePub对象保存到数据库
@@ -414,5 +430,24 @@ public class CourseService {
         teachplanMediaRepository.save(one);
 
         return new ResponseResult(CommonCode.SUCCESS);
+    }
+
+    //查询我的课程
+    public QueryResponseResult<CourseInfo> findCourseList(String company_id, int page, int size, CourseListRequest courseListRequest) {
+        if(courseListRequest == null){
+            courseListRequest = new CourseListRequest();
+        }
+        //将公司id参数传入dao
+        courseListRequest.setCompanyId(company_id);
+        //分页
+        PageHelper.startPage(page, size);
+        //调用dao
+        Page<CourseInfo> courseListPage = courseMapper.findCourseListPage(courseListRequest);
+        List<CourseInfo> list = courseListPage.getResult();
+        long total = courseListPage.getTotal();
+        QueryResult<CourseInfo> courseIncfoQueryResult = new QueryResult<CourseInfo>();
+        courseIncfoQueryResult.setList(list);
+        courseIncfoQueryResult.setTotal(total);
+        return new QueryResponseResult<CourseInfo>(CommonCode.SUCCESS,courseIncfoQueryResult);
     }
 }

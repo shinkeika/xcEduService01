@@ -12,6 +12,10 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
+/**
+ * @author Administrator
+ * @version 1.0
+ **/
 @SpringBootTest
 @RunWith(SpringRunner.class)
 public class TestRedis {

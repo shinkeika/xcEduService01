@@ -14,4 +14,11 @@ public class CourseInfo extends CourseBase {
     //课程图片
     private String pic;
 
+    public String getPic() {
+        return pic;
+    }
+
+    public void setPic(String pic) {
+        this.pic = pic;
+    }
 }

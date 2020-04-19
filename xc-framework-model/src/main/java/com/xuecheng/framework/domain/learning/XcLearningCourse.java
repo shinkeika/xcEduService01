@@ -33,4 +33,63 @@ public class XcLearningCourse implements Serializable {
     private Date endTime;
     private String status;
 
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public void setCourseId(String courseId) {
+        this.courseId = courseId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
+
+    public void setValid(String valid) {
+        this.valid = valid;
+    }
+
+    public void setStartTime(Date startTime) {
+        this.startTime = startTime;
+    }
+
+    public void setEndTime(Date endTime) {
+        this.endTime = endTime;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public String getCourseId() {
+        return courseId;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public String getValid() {
+        return valid;
+    }
+
+    public Date getStartTime() {
+        return startTime;
+    }
+
+    public Date getEndTime() {
+        return endTime;
+    }
+
+    public String getStatus() {
+        return status;
+    }
 }

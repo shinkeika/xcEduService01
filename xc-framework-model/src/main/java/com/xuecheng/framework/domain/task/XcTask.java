@@ -8,9 +8,6 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 
-/**
- * Created by mrt on 2018/4/4.
- */
 @Data
 @ToString
 @Entity
@@ -41,4 +38,92 @@ public class XcTask implements Serializable {
     private Integer version;
     private String status;
     private String errormsg;
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
+
+    public void setUpdateTime(Date updateTime) {
+        this.updateTime = updateTime;
+    }
+
+    public void setDeleteTime(Date deleteTime) {
+        this.deleteTime = deleteTime;
+    }
+
+    public void setTaskType(String taskType) {
+        this.taskType = taskType;
+    }
+
+    public void setMqExchange(String mqExchange) {
+        this.mqExchange = mqExchange;
+    }
+
+    public void setMqRoutingkey(String mqRoutingkey) {
+        this.mqRoutingkey = mqRoutingkey;
+    }
+
+    public void setRequestBody(String requestBody) {
+        this.requestBody = requestBody;
+    }
+
+    public void setVersion(Integer version) {
+        this.version = version;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public void setErrormsg(String errormsg) {
+        this.errormsg = errormsg;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public Date getUpdateTime() {
+        return updateTime;
+    }
+
+    public Date getDeleteTime() {
+        return deleteTime;
+    }
+
+    public String getTaskType() {
+        return taskType;
+    }
+
+    public String getMqExchange() {
+        return mqExchange;
+    }
+
+    public String getMqRoutingkey() {
+        return mqRoutingkey;
+    }
+
+    public String getRequestBody() {
+        return requestBody;
+    }
+
+    public Integer getVersion() {
+        return version;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public String getErrormsg() {
+        return errormsg;
+    }
 }

@@ -6,9 +6,6 @@ import org.apache.commons.lang3.StringUtils;
 import javax.servlet.http.HttpServletRequest;
 import java.util.Map;
 
-/**
- * Created by mrt on 2018/5/25.
- */
 public class XcOauth2Util {
 
     public UserJwt getUserJwtFromHeader(HttpServletRequest request){
@@ -32,6 +29,46 @@ public class XcOauth2Util {
         private String userpic;
         private String utype;
         private String companyId;
+
+        public void setId(String id) {
+            this.id = id;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public void setUserpic(String userpic) {
+            this.userpic = userpic;
+        }
+
+        public void setUtype(String utype) {
+            this.utype = utype;
+        }
+
+        public void setCompanyId(String companyId) {
+            this.companyId = companyId;
+        }
+
+        public String getId() {
+            return id;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public String getUserpic() {
+            return userpic;
+        }
+
+        public String getUtype() {
+            return utype;
+        }
+
+        public String getCompanyId() {
+            return companyId;
+        }
     }
 
 }

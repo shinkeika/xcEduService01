@@ -39,4 +39,84 @@ public class XcTaskHis implements Serializable {
     private String requestBody;
     private String version;
     private String status;
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
+    }
+
+    public void setUpdateTime(Date updateTime) {
+        this.updateTime = updateTime;
+    }
+
+    public void setDeleteTime(Date deleteTime) {
+        this.deleteTime = deleteTime;
+    }
+
+    public void setTaskType(String taskType) {
+        this.taskType = taskType;
+    }
+
+    public void setMqExchange(String mqExchange) {
+        this.mqExchange = mqExchange;
+    }
+
+    public void setMqRoutingkey(String mqRoutingkey) {
+        this.mqRoutingkey = mqRoutingkey;
+    }
+
+    public void setRequestBody(String requestBody) {
+        this.requestBody = requestBody;
+    }
+
+    public void setVersion(String version) {
+        this.version = version;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public Date getUpdateTime() {
+        return updateTime;
+    }
+
+    public Date getDeleteTime() {
+        return deleteTime;
+    }
+
+    public String getTaskType() {
+        return taskType;
+    }
+
+    public String getMqExchange() {
+        return mqExchange;
+    }
+
+    public String getMqRoutingkey() {
+        return mqRoutingkey;
+    }
+
+    public String getRequestBody() {
+        return requestBody;
+    }
+
+    public String getVersion() {
+        return version;
+    }
+
+    public String getStatus() {
+        return status;
+    }
 }
