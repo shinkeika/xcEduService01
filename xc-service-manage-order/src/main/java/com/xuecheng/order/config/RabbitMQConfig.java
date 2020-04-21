@@ -19,7 +19,7 @@ public class RabbitMQConfig {
     //添加选课路由key
     public static final String XC_LEARNING_ADDCHOOSECOURSE_KEY = "addchoosecourse";
     //完成添加选课路由key
-    public static final String XC_LEARNING_FINISHADDCHOOSECOURSE_KEY = "finishaddchoosecourse";
+    public static final String XC_LEARNING_FINISHADDCHOOSECOURSE_KEY = "finishaddchoosecourse"; 
 
     /**
      * 交换机配置
