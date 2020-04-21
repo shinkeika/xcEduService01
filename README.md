@@ -80,7 +80,7 @@
 
 #### Nginx配置
 
-
+[Nginx配置](https://github.com/shinkeika/xcEduService01/blob/master/nginx.conf)
 
 #### hosts
 
