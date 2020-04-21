@@ -25,10 +25,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.Map;
 
-/**
- * @author Administrator
- * @version 1.0
- **/
 @RestController
 @RequestMapping("/")
 public class AuthController implements AuthControllerApi {

@@ -46,15 +46,31 @@
 >
 >xc‐service‐manage‐cms‐client     CMS页面客户端系统(端口31000)
 >
->xc-service-manage-course            课程管理系统(端口31200)
+>test-fastdfs										fastdfs测试程序
 >
->xc-service-manage-media			 课程媒体资料管理服务(端口31400)
+>test-freemarker                               freemarker测试程序
 >
->Xc-service-manage-media-processor  课程
+>test-rabbitmq-producer				rabbitmq生产者测试程序(端口44000)
+>
+>test-rabbitmq-consumer			  rabbitmq消费者测试程序(端口44000)
+>
+>xc-govern-center						   Eureka服务(端口50101)
+>
+>xc-govern-gateway						zuul网关服务(端口50201)
+>
+>xc-service-manage-course           课程管理系统(端口31200)
+>
+>xc-service-manage-media			课程媒体资源管理服务(端口31400)
+>
+>Xc-service-manage-media-processor  课程媒体资源处理服务(端口31450)
 >
 >xc-service-base-filesystem            文件上传微服务(22100)
 >
->xc-govern-center                           注册中心(50101)
+>xc-service-search							elasticsearch服务(端口40100)
+>
+>xc-service-ucenter						 用户认证中心服务(端口40300)
+>
+>xc-service-ucenter-auth				用户认证中心jwt服务(端口40400)
 
 
 
