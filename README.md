@@ -1,5 +1,4 @@
 # xuechengEdu
 
-![gif](https://shinkeika.github.io/images/testimg.gif)
+![](https://ftp.bmp.ovh/imgs/2020/04/93c1eace6de621aa.gif)
 
-测试gif
